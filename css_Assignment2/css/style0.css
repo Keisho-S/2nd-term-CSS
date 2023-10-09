@@ -95,7 +95,7 @@ section> p:nth-of-type(even){
   background: linear-gradient(-45deg,#fff8b3,rgba(0,0,255,0));
   border-radius: 999px;
   /*shadow*/
-  filter: drop-shadow(0 0 0 6px #dbda74);
+  filter: drop-shadow(0 0 6px #dbda74);
   animation: tail 3s ease-in-out infinite, falling 3s ease-in-out infinite;
 }
 
@@ -118,7 +118,7 @@ section> p:nth-of-type(even){
 .star::after {
   content:"";
   position: absolute;
-  top: calc(50%-2px);
+  top: calc(50% - 2px);
   right:0;
   height:4px;
   background: linear-gradient(-45deg,rgba(0,0,255,0),#fff8b3,rgba(0,0,255,0));

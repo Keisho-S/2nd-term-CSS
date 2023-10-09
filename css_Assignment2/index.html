@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
     <link id="cssLink" rel="stylesheet" href="css/style0.css" />
     <title>CSS Assignment Two</title>
     <!-- REFERENCE -->
@@ -23,20 +24,11 @@
       </section>
     </header>
     <main>
-      <audio
-        id="audio"
-        src="audio/Yesterday_Once_More-Carpenters.mp3"
-        type="audio/mpeg"
-      ></audio>
+      <audio id="audio" src="audio/Yesterday_Once_More-Carpenters.mp3"></audio>
       <section id="page-container">
         <section class="center">
           <section class="smoke-fadeout1">
-            <h1>
-              <p>Yesterday-</p>
-              <p>Once-</p>
-              <p>More*</p>
-              <p>Carpenters*</p>
-            </h1>
+            <h1>Yesterday-Once-More*Carpenters*</h1>
           </section>
           <section class="smoke-fadeout2">
             <p>When&nbsp;</p>
@@ -299,46 +291,45 @@
             <p>more&nbsp;</p>
           </section>
           <section class="smoke-fadeout27">
-              <p>Every &nbsp;</p>
-              <p>Sha-</p>
-              <p>la-</p>
-              <p>la-</p>
-              <p>la&nbsp;</p>
-              <p>Every &nbsp;</p>
-              <p>Wo-</p>
-              <p>o-</p>
-              <p>wo-</p>
-              <p>o&nbsp;</p>
+            <p>Every &nbsp;</p>
+            <p>Sha-</p>
+            <p>la-</p>
+            <p>la-</p>
+            <p>la&nbsp;</p>
+            <p>Every &nbsp;</p>
+            <p>Wo-</p>
+            <p>o-</p>
+            <p>wo-</p>
+            <p>o&nbsp;</p>
           </section>
           <section class="smoke-fadeout28">
-              <p>Still &nbsp;</p>
-              <p>shines &nbsp;</p>
-              <p>Every &nbsp;</p>
-              <p>shing-</p>
-              <p>a-</p>
-              <p>ling-</p>
-              <p>a-</p>
-              <p>ling</p>
-           </section>
-          <section class="smoke-fadeout29">
-              <p>That &nbsp;</p>
-              <p>they're &nbsp;</p>
-              <p>startin' &nbsp;</p>
-              <p>to &nbsp;</p>
-              <p>sing's &nbsp;</p>
-              <p>So &nbsp;</p>
-              <p>fine &nbsp;</p>
+            <p>Still &nbsp;</p>
+            <p>shines &nbsp;</p>
+            <p>Every &nbsp;</p>
+            <p>shing-</p>
+            <p>a-</p>
+            <p>ling-</p>
+            <p>a-</p>
+            <p>ling</p>
           </section>
+          <section class="smoke-fadeout29">
+            <p>That &nbsp;</p>
+            <p>they're &nbsp;</p>
+            <p>startin' &nbsp;</p>
+            <p>to &nbsp;</p>
+            <p>sing's &nbsp;</p>
+            <p>So &nbsp;</p>
+            <p>fine &nbsp;</p>
           </section>
         </section>
-      </section>      
+      </section>
     </main>
     <footer>
       <button id="button" type="button">Play Music</button>
       <p id="assignment" style="color: Yellow">Assignment2-Keisho</p>
     </footer>
 
-    <!-- -----------------------------JavaScript Start----------------------- -->
+    <!-------------------------------JavaScript Start------------------------->
     <script>
       var button = document.getElementById("button");
       var count_click = 0;
@@ -355,7 +346,7 @@
           audio.currentTime = 0;
           audio.pause();
           cssLink.href = "css/style0.css"; //change css style
-          assignment.style.color ="Yellow";
+          assignment.style.color = "Yellow";
         }
       };
     </script>
