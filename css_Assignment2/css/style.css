@@ -1,0 +1,998 @@
+@font-face {
+  font-family: "Snell Roundhand Script";
+  src: url("https://db.onlinewebfonts.com/t/31ed0189fe1ff1e740a652e0f75b77dc.eot");
+  src: url("https://db.onlinewebfonts.com/t/31ed0189fe1ff1e740a652e0f75b77dc.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/31ed0189fe1ff1e740a652e0f75b77dc.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/31ed0189fe1ff1e740a652e0f75b77dc.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/31ed0189fe1ff1e740a652e0f75b77dc.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/31ed0189fe1ff1e740a652e0f75b77dc.svg#Snell Roundhand Script")format("svg");
+}
+html{overflow: hidden;}
+body,
+#page-container {
+  width: 100vw;
+  height: 85vh;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background: rgb(9, 0, 22);
+}
+
+.center {
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section.center > section {
+  display: flex;
+  flex: 1;
+}
+
+section >h1{
+  display: flex;
+  flex: 1;
+}
+
+button{
+  font-weight: bold;
+  width: 90px;
+  height: 50px;
+  border-radius: 50%;
+  color: #ac0b0b;
+  background-image: linear-gradient(#b4b2b2e6,#353535,#101010);
+}
+
+.smoke-fadeout1,
+.smoke-fadeout2,
+.smoke-fadeout3,
+.smoke-fadeout4,
+.smoke-fadeout5,
+.smoke-fadeout6,
+.smoke-fadeout7,
+.smoke-fadeout8,
+.smoke-fadeout9,
+.smoke-fadeout10,
+.smoke-fadeout11,
+.smoke-fadeout12,
+.smoke-fadeout13,
+.smoke-fadeout14,
+.smoke-fadeout15,
+.smoke-fadeout16,
+.smoke-fadeout17,
+.smoke-fadeout18,
+.smoke-fadeout19,
+.smoke-fadeout20,
+.smoke-fadeout21,
+.smoke-fadeout22,
+.smoke-fadeout23,
+.smoke-fadeout24,
+.smoke-fadeout25,
+.smoke-fadeout26,
+.smoke-fadeout27,
+.smoke-fadeout28,
+.smoke-fadeout29 {
+  position: absolute;
+  top: calc(50% - 100px);
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.smoke-fadeout1 p,
+.smoke-fadeout2 p,
+.smoke-fadeout3 p,
+.smoke-fadeout4 p,
+.smoke-fadeout5 p,
+.smoke-fadeout6 p,
+.smoke-fadeout7 p,
+.smoke-fadeout8 p,
+.smoke-fadeout9 p,
+.smoke-fadeout10 p,
+.smoke-fadeout11 p,
+.smoke-fadeout12 p,
+.smoke-fadeout13 p,
+.smoke-fadeout14 p,
+.smoke-fadeout15 p,
+.smoke-fadeout16 p,
+.smoke-fadeout17 p,
+.smoke-fadeout18 p,
+.smoke-fadeout19 p,
+.smoke-fadeout20 p,
+.smoke-fadeout21 p,
+.smoke-fadeout22 p,
+.smoke-fadeout23 p,
+.smoke-fadeout24 p,
+.smoke-fadeout25 p,
+.smoke-fadeout26 p,
+.smoke-fadeout27 p,
+.smoke-fadeout28 p,
+.smoke-fadeout29 p {
+  height: 200px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 50px;
+  text-shadow: 1px 1px 2px #bbb;
+  font-family:cursive,'Times New Roman', Times, serif;
+  animation: smoke 4s linear forwards;
+  opacity: 0;
+}
+
+@keyframes smoke {
+  0% {
+    opacity: 0;
+    filter: blur(40px);
+    transform: translate(-260px, -200px) rotate(0deg);
+  }
+
+  25%,50% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0) translateY(0) rotate(0deg) scale(1);
+    
+  }
+
+  100% {
+    opacity: 0;
+    filter: blur(40px);
+    transform: translate(260px, -200px) rotate(-145deg);
+    font-family:  "Snell Roundhand Script","Times New Roman", Times, serif;
+  }
+}
+section[class^="smoke"] p:nth-of-type(odd){
+  color:#fff; 
+}
+section> p:nth-of-type(even){
+  color:#dbda74;
+}
+
+/*--------------------shooting stars---------REF:  https://www.youtube.com/watch?v=7u2J0mEJt18------------------*/
+.sky{
+  position: absolute;
+  width: 100%;
+  /*height: 100vw;*/
+  
+  /*clockwise 140 degree*/
+  transform: rotateZ(149deg);
+  
+}
+
+.star {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 4px;
+  /*linear transform*/
+  background: linear-gradient(-45deg,#fff8b3,rgba(0,0,255,0));
+  border-radius: 999px;
+  /*shadow*/
+  filter: drop-shadow(0 0 0 6px #dbda74);
+  animation: tail 3s ease-in-out , falling 3s ease-in-out ;
+}
+
+/* star drop off*/
+@keyframes tail {
+  0%,100%{
+    width: 0;
+  }
+  30%{
+    width: 100px;
+  }
+}
+
+@keyframes falling{
+  0%{transform: translateX(0);}
+  100%{transform: translateX(1000px);}
+}
+
+.star::before,
+.star::after {
+  content:"";
+  position: absolute;
+  top: calc(50%-2px);
+  right:0;
+  height:4px;
+  background: linear-gradient(-45deg,rgba(0,0,255,0),#fff8b3,rgba(0,0,255,0));
+  border-radius: 100%;
+  transform: translateX(50%) rotateZ(45deg);
+  animation: shining 3s ease-in-out infinite;
+}
+
+@keyframes shining {
+  0%,100%{
+    width: 0;
+  }
+  50%{
+    width: 30px;
+  }
+}
+
+.star::after{
+  transform: translateX(50%) rotateZ(-45deg);
+}
+
+span:nth-child(1){
+  top: 0px;  
+  left: 0px;
+  animation-delay: 25s;
+}
+span:nth-child(2){
+  top: -150px;
+  left: 0px;
+  animation-delay: 67s;
+  
+}
+span:nth-child(3){
+  top: -150px;
+  left: 20px;
+  animation-delay: 55s;
+}
+span:nth-child(4){
+  top: -300px;
+  right: 1000px;
+  animation-delay: 109s;
+}
+span:nth-child(5){
+  top: -400px;
+  left: 300px;
+  animation-delay: 88s;
+} 
+span:nth-child(6){
+  top: -100px;
+  right: 1000px;
+  animation-delay: 147s;
+}
+/*--------------------shooting stars------------end--------------------------------------------*/
+
+/*----------------------1--------------------------*/
+.smoke-fadeout1 p:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.smoke-fadeout1 p:nth-child(2) {
+  animation-delay: 0.25s;
+}     
+.smoke-fadeout1 p:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.smoke-fadeout1 p:nth-child(4) {
+  animation-delay: 0.35s;
+}
+/*----------------------2--------------------------*/
+.smoke-fadeout2 p:nth-child(1) {
+  animation-delay: 1.9s;
+}
+.smoke-fadeout2 p:nth-child(2) {
+  animation-delay: 2s;
+}
+.smoke-fadeout2 p:nth-child(3) {
+  animation-delay: 2.1s;
+}     
+.smoke-fadeout2 p:nth-child(4) {
+  animation-delay: 2.2s;
+}
+/*----------------------3--------------------------*/
+.smoke-fadeout3 p:nth-child(1) {
+  animation-delay: 3.5s;
+}
+.smoke-fadeout3 p:nth-child(2) {
+  animation-delay: 4s;
+}
+.smoke-fadeout3 p:nth-child(3) {
+  animation-delay: 4.5s;
+}
+.smoke-fadeout3 p:nth-child(4) {
+  animation-delay: 4.5s;
+}     
+.smoke-fadeout3 p:nth-child(5) {
+  animation-delay: 5.5s;
+}
+/*----------------------4--------------------------*/
+.smoke-fadeout4 p:nth-child(1) {
+  animation-delay: 7.5s;
+}
+.smoke-fadeout4 p:nth-child(2) {
+  animation-delay: 8s;
+}
+.smoke-fadeout4 p:nth-child(3) {
+  animation-delay: 9s;
+}
+.smoke-fadeout4 p:nth-child(4) {
+  animation-delay: 10s;
+}     
+.smoke-fadeout4 p:nth-child(5) {
+  animation-delay: 11s;
+}
+/*----------------------5--------------------------*/
+.smoke-fadeout5 p:nth-child(1) {
+  animation-delay: 14s;
+}
+.smoke-fadeout5 p:nth-child(2) {
+  animation-delay: 14s;
+}
+.smoke-fadeout5 p:nth-child(3) {
+  animation-delay: 14.5s;
+}
+.smoke-fadeout5 p:nth-child(4) {
+  animation-delay: 15s;
+}     
+.smoke-fadeout5 p:nth-child(5) {
+  animation-delay: 16s;
+}
+.smoke-fadeout5 p:nth-child(6) {
+  animation-delay: 17s;
+}
+/*----------------------6--------------------------*/
+.smoke-fadeout6 p:nth-child(1) {
+  animation-delay: 18.5s;
+}
+.smoke-fadeout6 p:nth-child(2) {
+  animation-delay: 18.5s;
+}
+.smoke-fadeout6 p:nth-child(3) {
+  animation-delay: 19s;
+}     
+.smoke-fadeout6 p:nth-child(4) {
+  animation-delay: 19.5s;
+}
+/*----------------------7--------------------------*/
+.smoke-fadeout7 p:nth-child(1) {
+  animation-delay: 25s;
+}
+.smoke-fadeout7 p:nth-child(2) {
+  animation-delay: 25s;
+}
+.smoke-fadeout7 p:nth-child(3) {
+  animation-delay: 25.5s;
+}
+.smoke-fadeout7 p:nth-child(4) {
+  animation-delay: 26s;
+}     
+.smoke-fadeout7 p:nth-child(5) {
+  animation-delay: 26.5s;
+}
+.smoke-fadeout7 p:nth-child(6) {
+  animation-delay: 27.5s;
+}
+.smoke-fadeout7 p:nth-child(7) {
+  animation-delay: 28s;
+}
+.smoke-fadeout7 p:nth-child(8) {
+  animation-delay: 28.5s;
+}
+.smoke-fadeout7 p:nth-child(9) {
+  animation-delay: 29s;
+}     
+.smoke-fadeout7 p:nth-child(10) {
+  animation-delay: 29s;
+}
+/*----------------------8--------------------------*/
+.smoke-fadeout8 p:nth-child(1) {
+    animation-delay: 31s;
+  }
+  .smoke-fadeout8 p:nth-child(2) {
+    animation-delay: 31.5s;
+  }
+  .smoke-fadeout8 p:nth-child(3) {
+    animation-delay: 33s;
+  }
+  .smoke-fadeout8 p:nth-child(4) {
+    animation-delay: 33.5s;
+  }     
+  .smoke-fadeout8 p:nth-child(5) {
+    animation-delay: 34s;
+  }
+  .smoke-fadeout8 p:nth-child(6) {
+    animation-delay: 35s;
+  }
+  .smoke-fadeout8 p:nth-child(7) {
+    animation-delay: 37s;
+  }
+  .smoke-fadeout8 p:nth-child(8) {
+    animation-delay: 37.5s;
+  }
+  .smoke-fadeout8 p:nth-child(9) {
+    animation-delay: 38.5s;
+  }     
+  .smoke-fadeout8 p:nth-child(10) {
+    animation-delay: 39s;
+  }
+  /*----------------------9--------------------------*/
+.smoke-fadeout9 p:nth-child(1) {
+    animation-delay: 40s;
+  }
+  .smoke-fadeout9 p:nth-child(2) {
+    animation-delay: 41s;
+  }
+  .smoke-fadeout9 p:nth-child(3) {
+    animation-delay: 41.5s;
+  }
+  .smoke-fadeout9 p:nth-child(4) {
+    animation-delay: 42.5s;
+  }     
+  .smoke-fadeout9 p:nth-child(5) {
+    animation-delay: 42.5s;
+  }
+  .smoke-fadeout9 p:nth-child(6) {
+    animation-delay: 43s;
+  }
+  .smoke-fadeout9 p:nth-child(7) {
+    animation-delay: 43.5s;
+  }
+  .smoke-fadeout9 p:nth-child(8) {
+    animation-delay: 43.5s;
+  }
+  .smoke-fadeout9 p:nth-child(9) {
+    animation-delay: 44.5s;
+  }     
+  .smoke-fadeout9 p:nth-child(10) {
+    animation-delay: 45.5s;
+  }
+  .smoke-fadeout9 p:nth-child(11) {
+    animation-delay: 46.5s;
+  }
+  .smoke-fadeout9 p:nth-child(12) {
+    animation-delay: 47s;
+  }     
+  .smoke-fadeout9 p:nth-child(13) {
+    animation-delay: 47.5s;
+  }
+/*----------------------10--------------------------*/
+.smoke-fadeout10 p:nth-child(1) {
+    animation-delay: 48.5s;
+  }
+  .smoke-fadeout10 p:nth-child(2) {
+    animation-delay: 49s;
+  }
+  .smoke-fadeout10 p:nth-child(3) {
+    animation-delay: 49.1s;
+  }
+  .smoke-fadeout10 p:nth-child(4) {
+    animation-delay: 49.3s;
+  }     
+  .smoke-fadeout10 p:nth-child(5) {
+    animation-delay: 49.5s;
+  }
+  .smoke-fadeout10 p:nth-child(6) {
+    animation-delay: 51.5s;
+  }
+  .smoke-fadeout10 p:nth-child(7) {
+    animation-delay: 52.1s;
+  }
+  .smoke-fadeout10 p:nth-child(8) {
+    animation-delay: 52.3s;
+  }
+  .smoke-fadeout10 p:nth-child(9) {
+    animation-delay: 52.5s;
+  }     
+  .smoke-fadeout10 p:nth-child(10) {
+    animation-delay: 53s;
+  }
+/*----------------------11--------------------------*/
+.smoke-fadeout11 p:nth-child(1) {
+    animation-delay: 55s;
+  }
+  .smoke-fadeout11 p:nth-child(2) {
+    animation-delay: 55.5s;
+  }
+  .smoke-fadeout11 p:nth-child(3) {
+    animation-delay: 60.5s;
+  }
+  .smoke-fadeout11 p:nth-child(4) {
+    animation-delay: 61s;
+  }     
+  .smoke-fadeout11 p:nth-child(5) {
+    animation-delay: 61.2s;
+  }
+  .smoke-fadeout11 p:nth-child(6) {
+    animation-delay: 61.4s;
+  }
+  .smoke-fadeout11 p:nth-child(7) {
+    animation-delay: 61.6s;
+  }
+  .smoke-fadeout11 p:nth-child(8) {
+    animation-delay: 61.8s;
+  }
+/*----------------------12--------------------------*/
+.smoke-fadeout12 p:nth-child(1) {
+    animation-delay: 64s;
+  }
+  .smoke-fadeout12 p:nth-child(2) {
+    animation-delay: 64.5s;
+  }
+  .smoke-fadeout12 p:nth-child(3) {
+    animation-delay: 64.5s;
+  }
+  .smoke-fadeout12 p:nth-child(4) {
+    animation-delay: 65s;
+  }     
+  .smoke-fadeout12 p:nth-child(5) {
+    animation-delay: 65.5s;
+  }
+  .smoke-fadeout12 p:nth-child(6) {
+    animation-delay: 66.5s;
+  }
+  .smoke-fadeout12 p:nth-child(7) {
+    animation-delay: 66.5s;
+  }
+  .smoke-fadeout12 p:nth-child(8) {
+    animation-delay: 72s;
+  }
+  .smoke-fadeout12 p:nth-child(9) {
+    animation-delay: 72.5s;
+  }     
+  .smoke-fadeout12 p:nth-child(10) {
+    animation-delay: 73s;
+  }
+  .smoke-fadeout12 p:nth-child(11) {
+    animation-delay: 73.5s;
+  }
+  .smoke-fadeout12 p:nth-child(12) {
+    animation-delay: 74s;
+  }     
+  .smoke-fadeout12 p:nth-child(13) {
+    animation-delay: 74.5s;
+  }
+/*----------------------13--------------------------*/
+.smoke-fadeout13 p:nth-child(1) {
+  animation-delay: 75s;
+}
+.smoke-fadeout13 p:nth-child(2) {
+  animation-delay: 75.5s;
+}
+.smoke-fadeout13 p:nth-child(3) {
+  animation-delay: 76.5s;
+}
+.smoke-fadeout13 p:nth-child(4) {
+  animation-delay: 77s;
+}     
+.smoke-fadeout13 p:nth-child(5) {
+  animation-delay: 77.5s;
+}
+.smoke-fadeout13 p:nth-child(6) {
+  animation-delay: 78s;
+}
+.smoke-fadeout13 p:nth-child(7) {
+  animation-delay: 78.5s;
+}
+.smoke-fadeout13 p:nth-child(8) {
+  animation-delay: 79s;
+}
+.smoke-fadeout13 p:nth-child(9) {
+  animation-delay: 79.5s;
+}     
+.smoke-fadeout13 p:nth-child(10) {
+  animation-delay: 80s;
+}
+.smoke-fadeout13 p:nth-child(11) {
+  animation-delay: 82s;
+}
+/*----------------------14--------------------------*/
+.smoke-fadeout14 p:nth-child(1) {
+  animation-delay: 82.5s;
+}
+.smoke-fadeout14 p:nth-child(2) {
+  animation-delay: 83s;
+}
+.smoke-fadeout14 p:nth-child(3) {
+  animation-delay: 83.5s;
+}
+.smoke-fadeout14 p:nth-child(4) {
+  animation-delay: 89s;
+}     
+.smoke-fadeout14 p:nth-child(5) {
+  animation-delay: 90s;
+}
+.smoke-fadeout14 p:nth-child(6) {
+  animation-delay: 90.5s;
+}
+.smoke-fadeout14 p:nth-child(7) {
+  animation-delay: 91s;
+}
+/*----------------------15--------------------------*/
+.smoke-fadeout15 p:nth-child(1) {
+  animation-delay: 101s;
+}
+.smoke-fadeout15 p:nth-child(2) {
+  animation-delay: 101.5s;
+}
+.smoke-fadeout15 p:nth-child(3) {
+  animation-delay: 102s;
+}
+.smoke-fadeout15 p:nth-child(4) {
+  animation-delay: 102.5s;
+}     
+.smoke-fadeout15 p:nth-child(5) {
+  animation-delay: 103s;
+}
+.smoke-fadeout15 p:nth-child(6) {
+  animation-delay: 104s;
+}
+.smoke-fadeout15 p:nth-child(7) {
+  animation-delay: 105s;
+}
+.smoke-fadeout15 p:nth-child(8) {
+  animation-delay: 105.5s;
+}
+.smoke-fadeout15 p:nth-child(9) {
+  animation-delay: 106s;
+}     
+.smoke-fadeout15 p:nth-child(10) {
+  animation-delay: 106.5s;
+}
+/*----------------------16--------------------------*/
+.smoke-fadeout16 p:nth-child(1) {
+  animation-delay: 107s;
+}
+.smoke-fadeout16 p:nth-child(2) {
+  animation-delay: 107.5s;
+}
+.smoke-fadeout16 p:nth-child(3) {
+  animation-delay: 108s;
+}
+.smoke-fadeout16 p:nth-child(4) {
+  animation-delay: 108.5s;
+}     
+.smoke-fadeout16 p:nth-child(5) {
+  animation-delay: 109s;
+}
+.smoke-fadeout16 p:nth-child(6) {
+  animation-delay: 109.5s;
+}
+.smoke-fadeout16 p:nth-child(7) {
+  animation-delay: 110s;
+}
+.smoke-fadeout16 p:nth-child(8) {
+  animation-delay: 113s;
+}
+.smoke-fadeout16 p:nth-child(9) {
+  animation-delay: 113.5s;
+}     
+.smoke-fadeout16 p:nth-child(10) {
+  animation-delay: 114s;
+}
+.smoke-fadeout16 p:nth-child(11) {
+  animation-delay: 114.5s;
+}
+.smoke-fadeout16 p:nth-child(12) {
+  animation-delay: 115s;
+}     
+/*----------------------17--------------------------*/
+.smoke-fadeout17 p:nth-child(1) {
+  animation-delay: 118s;
+}
+.smoke-fadeout17 p:nth-child(2) {
+  animation-delay: 118.5s;
+}
+.smoke-fadeout17 p:nth-child(3) {
+  animation-delay: 119s;
+}
+.smoke-fadeout17 p:nth-child(4) {
+  animation-delay: 119.5s;
+}     
+.smoke-fadeout17 p:nth-child(5) {
+  animation-delay: 125s;
+}
+.smoke-fadeout17 p:nth-child(6) {
+  animation-delay: 125.5s;
+}
+.smoke-fadeout17 p:nth-child(7) {
+  animation-delay: 126s;
+}
+.smoke-fadeout17 p:nth-child(8) {
+  animation-delay: 126.5s;
+}
+.smoke-fadeout17 p:nth-child(9) {
+  animation-delay: 127s;
+}     
+.smoke-fadeout17 p:nth-child(10) {
+  animation-delay: 127.5s;
+}
+/*----------------------18--------------------------*/
+.smoke-fadeout18 p:nth-child(1) {
+  animation-delay: 128s;
+}
+.smoke-fadeout18 p:nth-child(2) {
+  animation-delay: 128.5s;
+}
+.smoke-fadeout18 p:nth-child(3) {
+  animation-delay: 129s;
+}
+.smoke-fadeout18 p:nth-child(4) {
+  animation-delay: 129.5s;
+}     
+.smoke-fadeout18 p:nth-child(5) {
+  animation-delay: 130s;
+}
+.smoke-fadeout18 p:nth-child(6) {
+  animation-delay: 130.5s;
+}
+.smoke-fadeout18 p:nth-child(7) {
+  animation-delay: 131s;
+}
+.smoke-fadeout18 p:nth-child(8) {
+  animation-delay: 131.5s;
+}
+.smoke-fadeout18 p:nth-child(9) {
+  animation-delay: 132s;
+}     
+.smoke-fadeout18 p:nth-child(10) {
+  animation-delay: 132.5s;
+}
+/*----------------------19--------------------------*/
+.smoke-fadeout19 p:nth-child(1) {
+  animation-delay: 136s;
+}
+.smoke-fadeout19 p:nth-child(2) {
+  animation-delay: 136.5s;
+}
+.smoke-fadeout19 p:nth-child(3) {
+  animation-delay: 137s;
+}
+.smoke-fadeout19 p:nth-child(4) {
+  animation-delay: 139s;
+}     
+.smoke-fadeout19 p:nth-child(5) {
+  animation-delay: 139s;
+}
+.smoke-fadeout19 p:nth-child(6) {
+  animation-delay: 139.5s;
+}
+.smoke-fadeout19 p:nth-child(7) {
+  animation-delay: 140s;
+}
+.smoke-fadeout19 p:nth-child(8) {
+  animation-delay: 140.5s;
+}
+.smoke-fadeout19 p:nth-child(9) {
+  animation-delay: 141s;
+}     
+/*----------------------20--------------------------*/
+.smoke-fadeout20 p:nth-child(1) {
+  animation-delay: 142s;
+}
+.smoke-fadeout20 p:nth-child(2) {
+  animation-delay: 142.5s;
+}
+.smoke-fadeout20 p:nth-child(3) {
+  animation-delay: 143s;
+}
+.smoke-fadeout20 p:nth-child(4) {
+  animation-delay: 143.5s;
+}     
+.smoke-fadeout20 p:nth-child(5) {
+  animation-delay: 144s;
+}
+.smoke-fadeout20 p:nth-child(6) {
+  animation-delay: 144.5s;
+}
+/*----------------------21--------------------------*/
+.smoke-fadeout21 p:nth-child(1) {
+  animation-delay: 147.5s;
+}
+.smoke-fadeout21 p:nth-child(2) {
+  animation-delay: 148s;
+}
+.smoke-fadeout21 p:nth-child(3) {
+  animation-delay: 148.1s;
+}
+.smoke-fadeout21 p:nth-child(4) {
+  animation-delay: 148.3s;
+}     
+.smoke-fadeout21 p:nth-child(5) {
+  animation-delay: 148.5s;
+}
+.smoke-fadeout21 p:nth-child(6) {
+  animation-delay: 150.5s;
+}
+.smoke-fadeout21 p:nth-child(7) {
+  animation-delay: 151.1s;
+}
+.smoke-fadeout21 p:nth-child(8) {
+  animation-delay: 151.3s;
+}
+.smoke-fadeout21 p:nth-child(9) {
+  animation-delay: 151.5s;
+}     
+.smoke-fadeout21 p:nth-child(10) {
+  animation-delay: 151.8s;
+}
+/*----------------------22--------------------------*/
+.smoke-fadeout22 p:nth-child(1) {
+  animation-delay: 154s;
+}
+.smoke-fadeout22 p:nth-child(2) {
+  animation-delay: 154.5s;
+}
+.smoke-fadeout22 p:nth-child(3) {
+  animation-delay: 159.5s;
+}
+.smoke-fadeout22 p:nth-child(4) {
+  animation-delay: 160s;
+}     
+.smoke-fadeout22 p:nth-child(5) {
+  animation-delay: 160.2s;
+}
+.smoke-fadeout22 p:nth-child(6) {
+  animation-delay: 160.4s;
+}
+.smoke-fadeout22 p:nth-child(7) {
+  animation-delay: 160.6s;
+}
+.smoke-fadeout22 p:nth-child(8) {
+  animation-delay: 160.8s;
+}
+/*----------------------23--------------------------*/
+.smoke-fadeout23 p:nth-child(1) {
+  animation-delay: 162.3s;
+}
+.smoke-fadeout23 p:nth-child(2) {
+  animation-delay: 162.8s;
+}
+.smoke-fadeout23 p:nth-child(3) {
+  animation-delay: 162.8s;
+}
+.smoke-fadeout23 p:nth-child(4) {
+  animation-delay: 163.3s;
+}     
+.smoke-fadeout23 p:nth-child(5) {
+  animation-delay: 163.8s;
+}
+.smoke-fadeout23 p:nth-child(6) {
+  animation-delay: 164.8s;
+}
+.smoke-fadeout23 p:nth-child(7) {
+  animation-delay: 165s;
+}
+/*----------------------24--------------------------*/
+.smoke-fadeout24 p:nth-child(1) {
+  animation-delay: 171s;
+}
+.smoke-fadeout24 p:nth-child(2) {
+  animation-delay: 171.5s;
+}
+.smoke-fadeout24 p:nth-child(3) {
+  animation-delay: 172s;
+}
+.smoke-fadeout24 p:nth-child(4) {
+  animation-delay: 172.5s;
+}     
+.smoke-fadeout24 p:nth-child(5) {
+  animation-delay: 173.8s;
+}
+.smoke-fadeout24 p:nth-child(6) {
+  animation-delay: 174s;
+}
+.smoke-fadeout24 p:nth-child(7) {
+  animation-delay: 174.5s;
+}
+.smoke-fadeout24 p:nth-child(8) {
+  animation-delay: 175s;
+}
+.smoke-fadeout24 p:nth-child(9) {
+  animation-delay: 175.2s;
+}
+/*----------------------25--------------------------*/
+.smoke-fadeout25 p:nth-child(1) {
+  animation-delay: 176.5s;
+}
+.smoke-fadeout25 p:nth-child(2) {
+  animation-delay: 177s;
+}
+.smoke-fadeout25 p:nth-child(3) {
+  animation-delay: 177.5s;
+}
+.smoke-fadeout25 p:nth-child(4) {
+  animation-delay: 178s;
+}     
+.smoke-fadeout25 p:nth-child(5) {
+  animation-delay: 178.5s;
+}
+.smoke-fadeout25 p:nth-child(6) {
+  animation-delay: 180.5s;
+}
+.smoke-fadeout25 p:nth-child(7) {
+  animation-delay: 181s;
+}
+.smoke-fadeout25 p:nth-child(8) {
+  animation-delay: 181.5s;
+}
+.smoke-fadeout25 p:nth-child(9) {
+  animation-delay: 182s;
+}
+/*----------------------26--------------------------*/
+.smoke-fadeout26 p:nth-child(1) {
+  animation-delay: 187s;
+}     
+.smoke-fadeout26 p:nth-child(2) {
+  animation-delay: 187.5s;
+}
+.smoke-fadeout26 p:nth-child(3) {
+  animation-delay: 188s;
+}
+.smoke-fadeout26 p:nth-child(4) {
+  animation-delay: 188.5s;
+}
+/*----------------------27--------------------------*/
+.smoke-fadeout27 p:nth-child(1) {
+  animation-delay: 193.5s;
+}
+.smoke-fadeout27 p:nth-child(2) {
+  animation-delay: 194s;
+}
+.smoke-fadeout27 p:nth-child(3) {
+  animation-delay: 194.5s;
+}
+.smoke-fadeout27 p:nth-child(4) {
+  animation-delay: 194.7s;
+}     
+.smoke-fadeout27 p:nth-child(5) {
+  animation-delay: 194.9s;
+}
+.smoke-fadeout27 p:nth-child(6) {
+  animation-delay: 197s;
+}
+.smoke-fadeout27 p:nth-child(7) {
+  animation-delay: 197.5s;
+}
+.smoke-fadeout27 p:nth-child(8) {
+  animation-delay: 197.6s;
+}
+.smoke-fadeout27 p:nth-child(9) {
+  animation-delay: 197.7s;
+}     
+.smoke-fadeout27 p:nth-child(10) {
+  animation-delay: 197.8s;
+}
+/*----------------------28--------------------------*/
+.smoke-fadeout28 p:nth-child(1) {
+  animation-delay: 200s;
+}
+.smoke-fadeout28 p:nth-child(2) {
+  animation-delay: 200.5s;
+}
+.smoke-fadeout28 p:nth-child(3) {
+  animation-delay: 205.5s;
+}
+.smoke-fadeout28 p:nth-child(4) {
+  animation-delay: 206s;
+}     
+.smoke-fadeout28 p:nth-child(5) {
+  animation-delay: 206.2s;
+}
+.smoke-fadeout28 p:nth-child(6) {
+  animation-delay: 206.4s;
+}
+.smoke-fadeout28 p:nth-child(7) {
+  animation-delay: 206.6s;
+}
+.smoke-fadeout28 p:nth-child(8) {
+  animation-delay: 206.8s;
+}
+/*----------------------29--------------------------*/
+.smoke-fadeout29 p:nth-child(1) {
+  animation-delay: 209.3s;
+}
+.smoke-fadeout29 p:nth-child(2) {
+  animation-delay: 209.8s;
+}
+.smoke-fadeout29 p:nth-child(3) {
+  animation-delay: 209.8s;
+}
+.smoke-fadeout29 p:nth-child(4) {
+  animation-delay: 210.3s;
+}     
+.smoke-fadeout29 p:nth-child(5) {
+  animation-delay: 210.8s;
+}
+.smoke-fadeout29 p:nth-child(6) {
+  animation-delay: 210.8s;
+}
+.smoke-fadeout29 p:nth-child(7) {
+  animation-delay: 211s;
+}

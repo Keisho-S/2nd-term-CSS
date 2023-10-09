@@ -1,0 +1,169 @@
+html,
+body,
+#page-container {
+  width: 100vw;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color:  rgb(9, 0, 22);
+  overflow-x: hidden;
+}
+
+.center {
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.center > section {
+  display: flex;
+  flex: 1;
+}
+@font-face {
+  font-family: "Snell Roundhand Script";
+  src: url("https://db.onlinewebfonts.com/t/31ed0189fe1ff1e740a652e0f75b77dc.eot");
+  src: url("https://db.onlinewebfonts.com/t/31ed0189fe1ff1e740a652e0f75b77dc.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/31ed0189fe1ff1e740a652e0f75b77dc.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/31ed0189fe1ff1e740a652e0f75b77dc.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/31ed0189fe1ff1e740a652e0f75b77dc.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/31ed0189fe1ff1e740a652e0f75b77dc.svg#Snell Roundhand Script")format("svg");
+}
+h1{
+  display: flex;
+  flex: 1;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px #dbda74;
+  font-size: 3rem;
+  font-family: serif,Georgia, 'Times New Roman', Times;
+}
+
+
+button{  
+  font-weight: bold;
+  width: 90px;
+  height: 50px;
+  border-radius: 50%;
+  color:rgb(0 255 47); 
+  background-image: linear-gradient(#2d2c2c,#504e4e,#a1a1a1e6);
+}
+
+section> p {
+    color: rgb(140, 137, 51);
+    font-family:  "Snell Roundhand Script","Times New Roman", Times, serif;
+    font-weight: bold;
+    font-size: 2rem;    
+    text-shadow: 1px 1px 2px #dbda74;
+   
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+section> p::first-letter{
+   
+  font-size: 2rem;
+}
+
+section[class^="smoke"] p:nth-of-type(odd){
+  color:#fff; 
+}
+section> p:nth-of-type(even){
+  color:#dbda74;
+}
+
+/*--------------------shooting stars---------REF:  https://www.youtube.com/watch?v=7u2J0mEJt18------------------*/
+.sky{
+  position: absolute;
+  width: 100%;
+  height: 100vw;  
+  /*clockwise 140 degree*/
+  transform: rotateZ(149deg);
+  
+}
+
+.star {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 4px;
+  /*linear transform*/
+  background: linear-gradient(-45deg,#fff8b3,rgba(0,0,255,0));
+  border-radius: 999px;
+  /*shadow*/
+  filter: drop-shadow(0 0 0 6px #dbda74);
+  animation: tail 3s ease-in-out infinite, falling 3s ease-in-out infinite;
+}
+
+/* star drop off*/
+@keyframes tail {
+  0%,100%{
+    width: 0;
+  }
+  30%{
+    width: 100px;
+  }
+}
+
+@keyframes falling{
+  0%{transform: translateX(0);}
+  100%{transform: translateX(1000px);}
+}
+
+.star::before,
+.star::after {
+  content:"";
+  position: absolute;
+  top: calc(50%-2px);
+  right:0;
+  height:4px;
+  background: linear-gradient(-45deg,rgba(0,0,255,0),#fff8b3,rgba(0,0,255,0));
+  border-radius: 100%;
+  transform: translateX(50%) rotateZ(45deg);
+  animation: shining 3s ease-in-out infinite;
+}
+
+@keyframes shining {
+  0%,100%{
+    width: 0;
+  }
+  50%{
+    width: 30px;
+  }
+}
+
+.star::after{
+  transform: translateX(50%) rotateZ(-45deg);
+}
+
+span:nth-child(1){
+  top: 1300px;
+  left: 200px;
+}
+span:nth-child(2){
+  top: 500px;
+  left: 100px;
+  
+}
+span:nth-child(3){
+  top: -1000px;
+  right: 20px;
+}
+span:nth-child(4){
+  top: 200px;
+  right: 50px;
+  left: initial;
+}
+span:nth-child(5){
+  top: 0px;
+  right: initial;
+}
+span:nth-child(6){
+  top: -500px;
+  left: 10px;
+} 
+/*--------------------shooting stars------------end--------------------------------------------*/
