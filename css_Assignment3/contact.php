@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Assignment three" content="Candy M&M's" />
+    <meta name="Author" content="Keisho" />
+    <meta name="START DATE" content="2023-11-05" />
+    <link rel="shortcut icon" href="img/images.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Candy M&M's</title>
+    <style>
+      /* Style inputs with type="text", select elements and textareas */
+      input[type="text"],
+      input[type="email"],
+      select,
+      textarea {
+        width: 100%; /* Full width */
+        padding: 10px; /* Some padding */
+        border: 1px solid chocolate; /* chocolate border */
+        border-radius: 4px; /* Rounded borders */
+        
+        margin-top: 6px; /* Add a top margin */
+        margin-bottom: 16px; /* Bottom margin */
+        resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+      }
+
+      /* Style the submit button with a specific background color etc */
+      input[type="submit"] {
+        background-color: brown;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      /* When moving the mouse over the submit button, add a chocolate color */
+      input[type="submit"]:hover {
+        background-color: chocolate;
+      }
+
+      /* Add a background color and some padding around the form */
+      .container {
+        border-radius: 5px;
+        background-color: rgb(153, 68, 8);
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body class="contact">
+    <header>
+      <nav class="nav">
+        <a class="active" href="index.php"
+          ><img src="img/logo.png" alt="M&M logo"
+        /></a>
+        <!-- https://www.m-ms.jp/ -->
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <!-- <i class="fas fa-bars"></i> -->
+          <i style="font-size: 24px" class="fa">&#xf0c9;</i>
+        </label>
+        <label class="logo">m&m! How Sweet Is This!</label>
+        <ul>
+          <li><a href="index.php">Home</a></li>
+          <li><a href="about.php">About</a></li>
+          <li><a href="product.php">Product</a></li>
+          <li><a href="contact.php">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <img src="img/ch4.png" alt="charater 4" />
+      <aside>
+        <!-- Newsletter Subscribe Form -->
+        <h1 class="new-feature">Subscribe to Newsletter</h1>
+
+        <div class="container">
+          <form action="submit.php" method="get">         
+            <label for="fname">First Name</label>
+            <input
+              type="text"
+              id="fname"
+              name="firstname"
+              placeholder="Your name.."
+            />
+
+            <label for="lname">Last Name</label>
+            <input
+              type="text"
+              id="lname"
+              name="lastname"
+              placeholder="Your last name.."
+            />
+
+            <label for="country">Country</label>
+            <select id="country" name="country">
+              <option value="canada">Canada</option>
+              <option value="usa">USA</option>
+              <option value="usa">Other</option>
+            </select>
+
+            <label for="emailAddress">Email</label>
+            <input type="email" name="emailAddress" id="emailAddress" required />
+
+            <label for="subject">Subject</label>
+            <textarea
+              id="subject"
+              name="subject"
+              placeholder="Write something.."
+              style="height: 100px"
+            ></textarea>
+
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </aside>
+    </main>
+    <footer>
+      <p>
+        <small
+          >Company:Seiho &nbsp;TEL: 555-555-555 <br />
+          Email: 123@456.com&nbsp;Author: Keisho
+        </small>
+      </p>
+      <img src="img/MMs1-logo.png" alt="footerLogo" />
+    </footer>
+  </body>
+</html>
